@@ -2,8 +2,11 @@ from app import app
 from app import mongo
 import re
 import json
-from flask import abort
+from flask import abort,render_template
 
+@app.route('/')
+def branchef():
+    return render_template('hekl.html')
 
 @app.route('/<string:ifsc>', methods=['GET'])
 def get_branch(ifsc):

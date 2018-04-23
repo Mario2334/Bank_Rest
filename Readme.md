@@ -4,4 +4,4 @@ Rest API Usage
 
     GET http://url/<ifsc code>: For getting bank details
 
-    GET http://url/<bank name>/<city>
+    GET http://url/<bank name>/<city>: For all branches in the city

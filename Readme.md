@@ -5,6 +5,7 @@ Rest API Usage
     GET http://url/ifsc?ifsc=<ifsc code>: For getting bank details
     GET http://url/ifsc?page=<page no>:get ifsc codes with banks
 
+    GET http://url/<bank name>?page=<page no>:get ifsc codes of the bank
     GET http://url/<bank name>?city=<city>: For all branches for bank in the city
 
 API details

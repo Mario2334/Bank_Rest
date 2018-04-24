@@ -21,6 +21,9 @@ def get_branch():
             20))
         return json.dumps({'codes': codes})
 
+    if ifsc is None and page is None:
+        return abort(400)
+
     if re.match(r'((?:[a-zA-Z]+[0-9]|[0-9]+[a-zA-Z])[a-zA-Z0-9]*)', ifsc):
         data = branches.find_one({'ifsc': ifsc}, {'_id': 0})
         return json.dumps(data)

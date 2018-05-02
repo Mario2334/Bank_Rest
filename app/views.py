@@ -34,7 +34,7 @@ def get_branch():
 @app.route('/<string:bank>', methods=['GET'])
 def get_branches(bank):
     city = request.args.get('city', default=None, type=str)
-    page = request.args.get('page' , default=None,type=str)
+    page = request.args.get('page' , default=None,type=int)
     branches = mongo.db.bank_branches
 
     # if city is not given then return all bank branches
